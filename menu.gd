@@ -16,7 +16,6 @@ func _ready():
 	soundNumber = $optionsMenu/HSlider/soundNumber
 	
 
-
 func _on_exit_pressed():
 	get_tree().quit()
 
