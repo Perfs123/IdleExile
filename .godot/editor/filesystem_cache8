@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1707272240
+icon.svg::CompressedTexture2D::7118070988411145465::1707268823::1707268828::1::::<><>::
+menu.tscn::PackedScene::8267220076099390772::1707272143::0::1::::<><>::res://menu.gd
+menu.gd::GDScript::-1::1707272108::0::1::::<>Control<>::
+::res://addons/::1707272240
+::res://addons/SliderLabel/::1707272240
+plugin.cfg::TextFile::-1::1707272240::0::1::::<><>::
+plugin.gd::GDScript::-1::1707272240::0::1::::<>EditorPlugin<>::
+SliderLabel.gd::GDScript::-1::1707272240::0::1::::<>Label<>::
+SliderLabel.svg::CompressedTexture2D::6884222339719164585::1707272240::1707272241::1::::<><>::
+::res://IdleExile/::1707268876
