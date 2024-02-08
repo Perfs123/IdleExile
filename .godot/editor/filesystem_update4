@@ -1,2 +1,14 @@
+res://Chest.gd
+res://chest.tscn
 res://menu.tscn
-res://menu.gd
+res://main_game.tscn
+res://chest.gdshader
+res://addons/UniversalFade/Fade.tscn
+res://addons/inventory_example/2d/Level1.tscn
+res://addons/inventory_example/2d/LevelCraft.tscn
+res://addons/inventory_example/2d/items/HealthNormal.tscn
+res://addons/inventory_example/2d/items/HealthBig.tscn
+res://addons/inventory_example/2d/items/HelmetKnight.tscn
+res://addons/inventory_example/inventories/clothes/InventoryClothesUI.tscn
+res://addons/inventory_example/inventories/simple/ItemUI.tscn
+res://addons/inventory_editor/test/MainTest.tscn

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d14tg8bfi3uh8"]
+
+[ext_resource type="Texture2D" uid="uid://coikuxkb6lweo" path="res://addons/inventory_example/textures/helmets/HelmetKnight.png" id="1"]
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 15.7035
+height = 31.407
+
+[node name="HelmetKnight" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 5)
+shape = SubResource("1")
+
+[node name="HelmetKnight" type="Sprite2D" parent="."]
+texture = ExtResource("1")

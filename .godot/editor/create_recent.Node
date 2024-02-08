@@ -1,7 +1,12 @@
-SliderLabel
+CanvasLayer
+AnimationPlayer
+Timer
 ColorRect
+AudioStreamPlayer
+CollisionShape2D
+Button
+SliderLabel
 Label
 HSlider
-Button
 CheckBox
 Control

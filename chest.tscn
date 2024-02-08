@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://bplmckfmibptk"]
+
+[ext_resource type="Script" path="res://Chest.gd" id="1_lchnd"]
+[ext_resource type="Texture2D" uid="uid://cq753iopobpmi" path="res://chest/chest.png" id="2_82ui6"]
+[ext_resource type="Texture2D" uid="uid://ctd55fdh3r2c1" path="res://chest/chestclosed.png" id="3_gaoxm"]
+[ext_resource type="AudioStream" uid="uid://d00feub1s1fka" path="res://sling.ogg" id="3_rnm43"]
+[ext_resource type="Texture2D" uid="uid://cxp042u1b3qw1" path="res://chest/chestopened.png" id="4_mgo1k"]
+[ext_resource type="Shader" path="res://chest.gdshader" id="6_16t0p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wk1fk"]
+shader = ExtResource("6_16t0p")
+shader_parameter/fade_in_time = 1.3
+shader_parameter/start_color = Vector4(0.5, 0, 0.5, 1)
+shader_parameter/end_color = Vector4(0, 0, 0, 0)
+
+[node name="Chest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lchnd")
+
+[node name="ChestPurple" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(551.812, 300.625)
+scale = Vector2(0.466131, 0.40625)
+texture = ExtResource("2_82ui6")
+
+[node name="AudioStreamSling" type="AudioStreamPlayer" parent="ChestPurple"]
+stream = ExtResource("3_rnm43")
+
+[node name="Chestclosed" type="Sprite2D" parent="."]
+position = Vector2(519.25, 288.5)
+scale = Vector2(0.423983, 0.459577)
+texture = ExtResource("3_gaoxm")
+
+[node name="Chestopened" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(582.25, 318.5)
+scale = Vector2(0.49064, 0.494518)
+texture = ExtResource("4_mgo1k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_wk1fk")
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 652.0
+color = Color(0.854902, 0.415686, 0.854902, 0)
+
+[node name="ButtonChest" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 419.0
+offset_top = 156.0
+offset_right = 637.0
+offset_bottom = 393.0
+
+[node name="Timer" type="Timer" parent="ButtonChest"]
+wait_time = 0.784
+
+[connection signal="pressed" from="ButtonChest" to="." method="_on_button_chest_pressed"]
+[connection signal="timeout" from="ButtonChest/Timer" to="." method="_on_timer_timeout"]
